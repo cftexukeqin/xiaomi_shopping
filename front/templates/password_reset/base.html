@@ -1,0 +1,11 @@
+{% extends 'front_base/../front/base.html' %}
+{% load i18n %}
+{% block main %}
+    <div class="main-box" style="margin: 50px auto;height: 200px;padding-left: 80px">
+    	<form method="post" action="{{ url }}">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<p><input type="submit" value="{% trans "Recover my password" %}"></p>
+	</form>
+    </div>
+{% endblock %}
